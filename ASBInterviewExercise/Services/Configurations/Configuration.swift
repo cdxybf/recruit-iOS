@@ -9,14 +9,15 @@ import Foundation
 
 class Configuration: ConfigurationCollection {
     
-    private let httpProtocolPrefix = "https://"
+    let httpProtocolPrefix = "https://"
     
     init() {
         guard let configurationDictionary = getPlistConfigurationsDictionary() else {
             fatalError("cannot read configurations from Info.plist file")
         }
         
-        serverBaseUrl = "\(httpProtocolPrefix)\(getConfigurationWithKey(dictionary: configurationDictionary, key: InfoPlistKeys.serverBaseUrlKey))"
+        let configuredUrl: String = getConfigurationWithKey(dictionary: configurationDictionary, key: InfoPlistKeys.serverBaseUrlKey)
+        serverBaseUrl = "\(httpProtocolPrefix)\(configuredUrl)"
     }
     
     var serverBaseUrl: String = ""

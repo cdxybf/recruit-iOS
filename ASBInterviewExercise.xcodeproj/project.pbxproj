@@ -11,6 +11,9 @@
 		81195519283984F60062FE25 /* Configuration.Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81195518283984F60062FE25 /* Configuration.Release.xcconfig */; };
 		8119551B283985170062FE25 /* ConfigurationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119551A283985170062FE25 /* ConfigurationCollection.swift */; };
 		811955202839859C0062FE25 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119551F2839859C0062FE25 /* Configuration.swift */; };
+		811955242839891D0062FE25 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 811955232839891D0062FE25 /* Cuckoo */; };
+		81195527283989F00062FE25 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81195526283989F00062FE25 /* GeneratedMocks.swift */; };
+		8119552928398A160062FE25 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119552828398A160062FE25 /* ConfigurationTests.swift */; };
 		DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */; };
 		DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */; };
 		DCF7BB0826B23DFF00AE0E0E /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0726B23DFF00AE0E0E /* TransactionsListViewController.swift */; };
@@ -44,6 +47,8 @@
 		81195518283984F60062FE25 /* Configuration.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.Release.xcconfig; sourceTree = "<group>"; };
 		8119551A283985170062FE25 /* ConfigurationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationCollection.swift; sourceTree = "<group>"; };
 		8119551F2839859C0062FE25 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		81195526283989F00062FE25 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		8119552828398A160062FE25 /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 		DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASBInterviewExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811955242839891D0062FE25 /* Cuckoo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +189,14 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		81195521283988B80062FE25 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8119552828398A160062FE25 /* ConfigurationTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DCF7BAF726B23DFE00AE0E0E = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +237,8 @@
 		DCF7BB1926B23E0200AE0E0E /* ASBInterviewExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
+				81195526283989F00062FE25 /* GeneratedMocks.swift */,
+				81195521283988B80062FE25 /* Services */,
 				DCF7BB1A26B23E0200AE0E0E /* ASBInterviewExerciseTests.swift */,
 				DCF7BB1C26B23E0200AE0E0E /* Info.plist */,
 			);
@@ -265,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCF7BB2D26B23E0200AE0E0E /* Build configuration list for PBXNativeTarget "ASBInterviewExerciseTests" */;
 			buildPhases = (
+				81195525283989840062FE25 /* ShellScript */,
 				DCF7BB1226B23E0200AE0E0E /* Sources */,
 				DCF7BB1326B23E0200AE0E0E /* Frameworks */,
 				DCF7BB1426B23E0200AE0E0E /* Resources */,
@@ -275,6 +292,9 @@
 				DCF7BB1826B23E0200AE0E0E /* PBXTargetDependency */,
 			);
 			name = ASBInterviewExerciseTests;
+			packageProductDependencies = (
+				811955232839891D0062FE25 /* Cuckoo */,
+			);
 			productName = ASBInterviewExerciseTests;
 			productReference = DCF7BB1626B23E0200AE0E0E /* ASBInterviewExerciseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -330,6 +350,7 @@
 			mainGroup = DCF7BAF726B23DFE00AE0E0E;
 			packageReferences = (
 				DCF7BB3326B23E3600AE0E0E /* XCRemoteSwiftPackageReference "Swinject" */,
+				811955222839891D0062FE25 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 			);
 			productRefGroup = DCF7BB0126B23DFE00AE0E0E /* Products */;
 			projectDirPath = "";
@@ -371,6 +392,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		81195525283989840062FE25 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nif [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0 \nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\necho \"${INPUT_DIR}\"\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Protocols/ConfigurationCollection.swift\" \n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DCF7BAFC26B23DFE00AE0E0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -389,6 +430,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCF7BB1B26B23E0200AE0E0E /* ASBInterviewExerciseTests.swift in Sources */,
+				81195527283989F00062FE25 /* GeneratedMocks.swift in Sources */,
+				8119552928398A160062FE25 /* ConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +760,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		811955222839891D0062FE25 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
 		DCF7BB3326B23E3600AE0E0E /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -728,6 +779,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		811955232839891D0062FE25 /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 811955222839891D0062FE25 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
+		};
 		DCF7BB3426B23E3600AE0E0E /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCF7BB3326B23E3600AE0E0E /* XCRemoteSwiftPackageReference "Swinject" */;
