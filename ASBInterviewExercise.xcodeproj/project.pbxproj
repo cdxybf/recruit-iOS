@@ -19,6 +19,11 @@
 		81195532283991FE0062FE25 /* ApiServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81195531283991FE0062FE25 /* ApiServiceError.swift */; };
 		81195534283992550062FE25 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81195533283992550062FE25 /* RestClient.swift */; };
 		81195537283992920062FE25 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 81195536283992920062FE25 /* Alamofire */; };
+		8119553A2839994C0062FE25 /* BaseApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811955392839994C0062FE25 /* BaseApiService.swift */; };
+		8119553C283999860062FE25 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119553B283999860062FE25 /* TransactionsService.swift */; };
+		8119553F283999B20062FE25 /* TransactionsServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119553E283999B20062FE25 /* TransactionsServiceable.swift */; };
+		81195542283999DD0062FE25 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81195541283999DD0062FE25 /* Transaction.swift */; };
+		8119554528399AED0062FE25 /* TransactionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119554428399AED0062FE25 /* TransactionsServiceTests.swift */; };
 		DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */; };
 		DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */; };
 		DCF7BB0826B23DFF00AE0E0E /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0726B23DFF00AE0E0E /* TransactionsListViewController.swift */; };
@@ -57,6 +62,11 @@
 		8119552A283991560062FE25 /* RestClientable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClientable.swift; sourceTree = "<group>"; };
 		81195531283991FE0062FE25 /* ApiServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceError.swift; sourceTree = "<group>"; };
 		81195533283992550062FE25 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		811955392839994C0062FE25 /* BaseApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiService.swift; sourceTree = "<group>"; };
+		8119553B283999860062FE25 /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		8119553E283999B20062FE25 /* TransactionsServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsServiceable.swift; sourceTree = "<group>"; };
+		81195541283999DD0062FE25 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		8119554428399AED0062FE25 /* TransactionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsServiceTests.swift; sourceTree = "<group>"; };
 		DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASBInterviewExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +135,7 @@
 		8119550D283981E70062FE25 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				81195540283999CD0062FE25 /* Transactions */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 		81195521283988B80062FE25 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8119554328399AD70062FE25 /* ApiServices */,
 				8119552828398A160062FE25 /* ConfigurationTests.swift */,
 			);
 			path = Services;
@@ -215,6 +227,7 @@
 				81195530283991E40062FE25 /* Transactions */,
 				81195531283991FE0062FE25 /* ApiServiceError.swift */,
 				81195533283992550062FE25 /* RestClient.swift */,
+				811955392839994C0062FE25 /* BaseApiService.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -222,6 +235,7 @@
 		81195530283991E40062FE25 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				8119553B283999860062FE25 /* TransactionsService.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -229,7 +243,32 @@
 		81195538283993A30062FE25 /* ApiServices */ = {
 			isa = PBXGroup;
 			children = (
+				8119553D2839999C0062FE25 /* Transactions */,
 				8119552A283991560062FE25 /* RestClientable.swift */,
+			);
+			path = ApiServices;
+			sourceTree = "<group>";
+		};
+		8119553D2839999C0062FE25 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				8119553E283999B20062FE25 /* TransactionsServiceable.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		81195540283999CD0062FE25 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				81195541283999DD0062FE25 /* Transaction.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		8119554328399AD70062FE25 /* ApiServices */ = {
+			isa = PBXGroup;
+			children = (
+				8119554428399AED0062FE25 /* TransactionsServiceTests.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -449,7 +488,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nif [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0 \nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\necho \"${INPUT_DIR}\"\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Protocols/ConfigurationCollection.swift\" \n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nif [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0 \nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\necho \"${INPUT_DIR}\"\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Protocols/ConfigurationCollection.swift\" \\\n\"${INPUT_DIR}/Protocols/ApiServices/RestClientable.swift\" \\\n\"${INPUT_DIR}/Protocols/ApiServices/Transactions/TransactionsServiceable.swift\" \n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -458,13 +497,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8119553F283999B20062FE25 /* TransactionsServiceable.swift in Sources */,
 				81195534283992550062FE25 /* RestClient.swift in Sources */,
+				81195542283999DD0062FE25 /* Transaction.swift in Sources */,
 				8119552B283991560062FE25 /* RestClientable.swift in Sources */,
 				8119551B283985170062FE25 /* ConfigurationCollection.swift in Sources */,
+				8119553A2839994C0062FE25 /* BaseApiService.swift in Sources */,
 				81195532283991FE0062FE25 /* ApiServiceError.swift in Sources */,
 				811955202839859C0062FE25 /* Configuration.swift in Sources */,
 				DCF7BB0826B23DFF00AE0E0E /* TransactionsListViewController.swift in Sources */,
 				DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */,
+				8119553C283999860062FE25 /* TransactionsService.swift in Sources */,
 				DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +518,7 @@
 			files = (
 				DCF7BB1B26B23E0200AE0E0E /* ASBInterviewExerciseTests.swift in Sources */,
 				81195527283989F00062FE25 /* GeneratedMocks.swift in Sources */,
+				8119554528399AED0062FE25 /* TransactionsServiceTests.swift in Sources */,
 				8119552928398A160062FE25 /* ConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
