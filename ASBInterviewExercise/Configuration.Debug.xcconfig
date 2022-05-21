@@ -1,0 +1,11 @@
+//
+//  Configuration.Debug.xcconfig
+//  ASBInterviewExercise
+//
+//  Created by Rosman Cheng on 22/05/22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+SERVER_BASE_URL = gist.githubusercontent.com/Josh-Ng

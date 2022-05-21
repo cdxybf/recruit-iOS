@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81195517283984E30062FE25 /* Configuration.Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81195516283984E30062FE25 /* Configuration.Debug.xcconfig */; };
+		81195519283984F60062FE25 /* Configuration.Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 81195518283984F60062FE25 /* Configuration.Release.xcconfig */; };
+		8119551B283985170062FE25 /* ConfigurationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119551A283985170062FE25 /* ConfigurationCollection.swift */; };
+		811955202839859C0062FE25 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119551F2839859C0062FE25 /* Configuration.swift */; };
 		DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */; };
 		DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */; };
 		DCF7BB0826B23DFF00AE0E0E /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0726B23DFF00AE0E0E /* TransactionsListViewController.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81195516283984E30062FE25 /* Configuration.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.Debug.xcconfig; sourceTree = "<group>"; };
+		81195518283984F60062FE25 /* Configuration.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.Release.xcconfig; sourceTree = "<group>"; };
+		8119551A283985170062FE25 /* ConfigurationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationCollection.swift; sourceTree = "<group>"; };
+		8119551F2839859C0062FE25 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASBInterviewExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 		8119550E283981EF0062FE25 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8119551C2839854E0062FE25 /* Configurations */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -115,6 +124,7 @@
 		8119550F283981F50062FE25 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8119551A283985170062FE25 /* ConfigurationCollection.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -165,6 +175,14 @@
 			path = Transactions;
 			sourceTree = "<group>";
 		};
+		8119551C2839854E0062FE25 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				8119551F2839859C0062FE25 /* Configuration.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		DCF7BAF726B23DFE00AE0E0E = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +214,8 @@
 				DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */,
 				DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */,
 				DCF7BB1126B23E0200AE0E0E /* Info.plist */,
+				81195516283984E30062FE25 /* Configuration.Debug.xcconfig */,
+				81195518283984F60062FE25 /* Configuration.Release.xcconfig */,
 			);
 			path = ASBInterviewExercise;
 			sourceTree = "<group>";
@@ -327,9 +347,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81195517283984E30062FE25 /* Configuration.Debug.xcconfig in Resources */,
 				DCF7BB1026B23E0200AE0E0E /* LaunchScreen.storyboard in Resources */,
 				DCF7BB0D26B23E0200AE0E0E /* Assets.xcassets in Resources */,
 				DCF7BB0B26B23DFF00AE0E0E /* Transactions.storyboard in Resources */,
+				81195519283984F60062FE25 /* Configuration.Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +376,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8119551B283985170062FE25 /* ConfigurationCollection.swift in Sources */,
+				811955202839859C0062FE25 /* Configuration.swift in Sources */,
 				DCF7BB0826B23DFF00AE0E0E /* TransactionsListViewController.swift in Sources */,
 				DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */,
 				DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */,
@@ -413,6 +437,7 @@
 /* Begin XCBuildConfiguration section */
 		DCF7BB2826B23E0200AE0E0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195516283984E30062FE25 /* Configuration.Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -474,6 +499,7 @@
 		};
 		DCF7BB2926B23E0200AE0E0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195518283984F60062FE25 /* Configuration.Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -529,6 +555,7 @@
 		};
 		DCF7BB2B26B23E0200AE0E0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195516283984E30062FE25 /* Configuration.Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -547,6 +574,7 @@
 		};
 		DCF7BB2C26B23E0200AE0E0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195518283984F60062FE25 /* Configuration.Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -565,6 +593,7 @@
 		};
 		DCF7BB2E26B23E0200AE0E0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195516283984E30062FE25 /* Configuration.Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -586,6 +615,7 @@
 		};
 		DCF7BB2F26B23E0200AE0E0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195518283984F60062FE25 /* Configuration.Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -607,6 +637,7 @@
 		};
 		DCF7BB3126B23E0200AE0E0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195516283984E30062FE25 /* Configuration.Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,6 +657,7 @@
 		};
 		DCF7BB3226B23E0200AE0E0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81195518283984F60062FE25 /* Configuration.Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
