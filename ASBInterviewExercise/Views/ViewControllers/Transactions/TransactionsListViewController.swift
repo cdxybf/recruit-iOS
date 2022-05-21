@@ -7,15 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TransactionsListViewController: UIViewController {
 
-    @IBOutlet weak var demoTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        demoTextView.text = ""
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
