@@ -2,12 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "354dda32d89fc8cd4f5c46487f64957d355f53d8",
+          "version": "5.6.1"
+        }
+      },
+      {
         "package": "Cuckoo",
         "repositoryURL": "https://github.com/Brightify/Cuckoo.git",
         "state": {
           "branch": null,
           "revision": "69c1c9aee64ec08a14461deb20878bd7ebeb9459",
           "version": "1.7.1"
+        }
+      },
+      {
+        "package": "HTTPStatusCodes",
+        "repositoryURL": "https://github.com/rhodgkins/SwiftHTTPStatusCodes.git",
+        "state": {
+          "branch": null,
+          "revision": "a2c4f5f645dec3a5614ff82e391f44e22d778f87",
+          "version": "3.3.2"
         }
       },
       {
