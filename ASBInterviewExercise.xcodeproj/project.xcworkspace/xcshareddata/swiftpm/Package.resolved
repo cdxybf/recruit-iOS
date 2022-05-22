@@ -45,6 +45,15 @@
           "revision": "8a76d2c74bafbb455763487cc6a08e91bad1f78b",
           "version": "2.7.1"
         }
+      },
+      {
+        "package": "SwinjectStoryboard",
+        "repositoryURL": "https://github.com/Swinject/SwinjectStoryboard.git",
+        "state": {
+          "branch": null,
+          "revision": "a39bd7abe7e7427f9a0929a402cf2d1916fa5d50",
+          "version": "2.2.2"
+        }
       }
     ]
   },

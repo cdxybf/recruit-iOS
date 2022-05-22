@@ -31,6 +31,10 @@
 		811955522839AF610062FE25 /* Date+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811955512839AF610062FE25 /* Date+Format.swift */; };
 		811955552839B1CF0062FE25 /* TransactionsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811955542839B1CF0062FE25 /* TransactionsListTableViewCell.swift */; };
 		811955572839B8E50062FE25 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811955562839B8E50062FE25 /* TransactionDetailsViewController.swift */; };
+		8119555A2839BB310062FE25 /* SwinjectStoryboard in Frameworks */ = {isa = PBXBuildFile; productRef = 811955592839BB310062FE25 /* SwinjectStoryboard */; };
+		8119555D2839BB8B0062FE25 /* IocContainerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119555C2839BB8B0062FE25 /* IocContainerable.swift */; };
+		8119555F2839BBBF0062FE25 /* IocContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8119555E2839BBBF0062FE25 /* IocContainer.swift */; };
+		811955612839BBE30062FE25 /* IocConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811955602839BBE30062FE25 /* IocConfiguration.swift */; };
 		DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */; };
 		DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */; };
 		DCF7BB0826B23DFF00AE0E0E /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0726B23DFF00AE0E0E /* TransactionsListViewController.swift */; };
@@ -79,6 +83,9 @@
 		811955512839AF610062FE25 /* Date+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Format.swift"; sourceTree = "<group>"; };
 		811955542839B1CF0062FE25 /* TransactionsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListTableViewCell.swift; sourceTree = "<group>"; };
 		811955562839B8E50062FE25 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		8119555C2839BB8B0062FE25 /* IocContainerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IocContainerable.swift; sourceTree = "<group>"; };
+		8119555E2839BBBF0062FE25 /* IocContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IocContainer.swift; sourceTree = "<group>"; };
+		811955602839BBE30062FE25 /* IocConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IocConfiguration.swift; sourceTree = "<group>"; };
 		DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASBInterviewExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 				DCF7BB3526B23E3600AE0E0E /* Swinject in Frameworks */,
 				8119554A2839AC8F0062FE25 /* RxSwift in Frameworks */,
 				811955482839AC8F0062FE25 /* RxCocoa in Frameworks */,
+				8119555A2839BB310062FE25 /* SwinjectStoryboard in Frameworks */,
 				8119552E283991A40062FE25 /* HTTPStatusCodes in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +169,7 @@
 			children = (
 				8119552F283991BD0062FE25 /* ApiServices */,
 				8119551C2839854E0062FE25 /* Configurations */,
+				8119555B2839BB430062FE25 /* InversionOfControl */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				81195538283993A30062FE25 /* ApiServices */,
+				8119555C2839BB8B0062FE25 /* IocContainerable.swift */,
 				8119551A283985170062FE25 /* ConfigurationCollection.swift */,
 			);
 			path = Protocols;
@@ -316,6 +326,15 @@
 			path = Transactions;
 			sourceTree = "<group>";
 		};
+		8119555B2839BB430062FE25 /* InversionOfControl */ = {
+			isa = PBXGroup;
+			children = (
+				8119555E2839BBBF0062FE25 /* IocContainer.swift */,
+				811955602839BBE30062FE25 /* IocConfiguration.swift */,
+			);
+			path = InversionOfControl;
+			sourceTree = "<group>";
+		};
 		DCF7BAF726B23DFE00AE0E0E = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +414,7 @@
 				81195536283992920062FE25 /* Alamofire */,
 				811955472839AC8F0062FE25 /* RxCocoa */,
 				811955492839AC8F0062FE25 /* RxSwift */,
+				811955592839BB310062FE25 /* SwinjectStoryboard */,
 			);
 			productName = ASBInterviewExercise;
 			productReference = DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */;
@@ -477,6 +497,7 @@
 				8119552C283991A40062FE25 /* XCRemoteSwiftPackageReference "SwiftHTTPStatusCodes" */,
 				81195535283992920062FE25 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				811955462839AC8F0062FE25 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				811955582839BB310062FE25 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */,
 			);
 			productRefGroup = DCF7BB0126B23DFE00AE0E0E /* Products */;
 			projectDirPath = "";
@@ -551,7 +572,10 @@
 				8119551B283985170062FE25 /* ConfigurationCollection.swift in Sources */,
 				8119553A2839994C0062FE25 /* BaseApiService.swift in Sources */,
 				811955552839B1CF0062FE25 /* TransactionsListTableViewCell.swift in Sources */,
+				811955612839BBE30062FE25 /* IocConfiguration.swift in Sources */,
 				811955522839AF610062FE25 /* Date+Format.swift in Sources */,
+				8119555D2839BB8B0062FE25 /* IocContainerable.swift in Sources */,
+				8119555F2839BBBF0062FE25 /* IocContainer.swift in Sources */,
 				8119554D2839ACB70062FE25 /* TransactionsListViewModel.swift in Sources */,
 				81195532283991FE0062FE25 /* ApiServiceError.swift in Sources */,
 				811955202839859C0062FE25 /* Configuration.swift in Sources */,
@@ -931,6 +955,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		811955582839BB310062FE25 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectStoryboard.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 		DCF7BB3326B23E3600AE0E0E /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -966,6 +998,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 811955462839AC8F0062FE25 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		811955592839BB310062FE25 /* SwinjectStoryboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 811955582839BB310062FE25 /* XCRemoteSwiftPackageReference "SwinjectStoryboard" */;
+			productName = SwinjectStoryboard;
 		};
 		DCF7BB3426B23E3600AE0E0E /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -13,7 +13,7 @@ class TransactionsListViewModel {
     private let _transactionsService: TransactionsServiceable
     
     init(transactionsService: TransactionsServiceable? = nil) {
-        _transactionsService = transactionsService ?? TransactionsService(restClient: RestClient(), configuration: Configuration())
+        _transactionsService = transactionsService ?? Container.resolve(protocol: TransactionsServiceable.self)
     }
     
     let transactionsViewModel = PublishRelay<[TransactionsListCellViewModel]>()
