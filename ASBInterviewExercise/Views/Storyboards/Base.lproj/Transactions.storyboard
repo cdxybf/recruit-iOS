@@ -16,14 +16,173 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-Z3-EAw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="transactionCellIdentifier" rowHeight="90" id="oTL-Jp-MaZ" customClass="TransactionsListTableViewCell" customModule="ASBInterviewExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oTL-Jp-MaZ" id="kgZ-2X-raE">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPf-Lp-Y31">
+                                                    <rect key="frame" x="20" y="19" width="69" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqk-Ji-ivV">
+                                                    <rect key="frame" x="20" y="47" width="121.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686277149999996" green="0.55686277149999996" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFe-uM-0KN">
+                                                    <rect key="frame" x="333" y="19" width="44.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhA-fh-CNz">
+                                                    <rect key="frame" x="338.5" y="46.5" width="39" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qqk-Ji-ivV" firstAttribute="top" secondItem="HPf-Lp-Y31" secondAttribute="bottom" constant="8" id="Ai8-uu-mZR"/>
+                                                <constraint firstItem="HPf-Lp-Y31" firstAttribute="leading" secondItem="kgZ-2X-raE" secondAttribute="leadingMargin" id="BT1-HE-mxA"/>
+                                                <constraint firstItem="HPf-Lp-Y31" firstAttribute="top" secondItem="kgZ-2X-raE" secondAttribute="topMargin" constant="8" id="CGN-O6-osw"/>
+                                                <constraint firstItem="mhA-fh-CNz" firstAttribute="top" secondItem="FFe-uM-0KN" secondAttribute="bottom" constant="8" id="HsT-rN-Ymo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mhA-fh-CNz" secondAttribute="trailing" id="Obg-UO-ApJ"/>
+                                                <constraint firstItem="qqk-Ji-ivV" firstAttribute="leading" secondItem="kgZ-2X-raE" secondAttribute="leadingMargin" id="dhz-G7-Yav"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FFe-uM-0KN" secondAttribute="trailing" id="fPw-5C-zvS"/>
+                                                <constraint firstItem="FFe-uM-0KN" firstAttribute="top" secondItem="kgZ-2X-raE" secondAttribute="topMargin" constant="8" id="kS7-PO-iak"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="creditLabel" destination="FFe-uM-0KN" id="Esb-Wf-K06"/>
+                                            <outlet property="debitLabel" destination="mhA-fh-CNz" id="oWA-mW-NsO"/>
+                                            <outlet property="summaryLabel" destination="HPf-Lp-Y31" id="Cph-Nu-rte"/>
+                                            <outlet property="transactionDateLabel" destination="qqk-Ji-ivV" id="fPH-YK-gHp"/>
+                                            <segue destination="OH8-JW-FSS" kind="show" identifier="navigateToTransactionDetails" id="3L9-KG-ztx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2mh-Z3-EAw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="00J-d2-ozK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2mh-Z3-EAw" secondAttribute="trailing" id="Onh-BA-3CY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2mh-Z3-EAw" secondAttribute="bottom" id="Pi4-SD-fzf"/>
+                            <constraint firstItem="2mh-Z3-EAw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c1l-XM-V2P"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Transactions" id="PZV-0p-SCT"/>
+                    <connections>
+                        <outlet property="transactionsTableView" destination="2mh-Z3-EAw" id="Mo5-u6-lGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
+        </scene>
+        <!--Transaction-->
+        <scene sceneID="65r-1V-841">
+            <objects>
+                <viewController id="OH8-JW-FSS" customClass="TransactionDetailsViewController" customModule="ASBInterviewExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0sF-Fd-Vet">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ck-lw-WcU">
+                                <rect key="frame" x="20" y="108" width="73.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4d-zN-wKK">
+                                <rect key="frame" x="20" y="131.5" width="374" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpS-jD-0M9">
+                                <rect key="frame" x="20" y="171" width="126" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZQ-lc-jxN">
+                                <rect key="frame" x="20" y="195" width="40" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.55686277149999996" green="0.55686277149999996" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J65-EG-nSC">
+                                <rect key="frame" x="20" y="235" width="49" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2e-6s-XLg">
+                                <rect key="frame" x="20" y="259" width="23" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wt-yO-Xci">
+                                <rect key="frame" x="20" y="299" width="44" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixq-ic-1ug">
+                                <rect key="frame" x="20" y="323" width="23" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LMH-Vp-xG8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U2e-6s-XLg" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="3x2-T3-GkS"/>
+                            <constraint firstItem="J65-EG-nSC" firstAttribute="top" secondItem="0ZQ-lc-jxN" secondAttribute="bottom" constant="20" id="4CS-WC-1gj"/>
+                            <constraint firstItem="0ZQ-lc-jxN" firstAttribute="top" secondItem="zpS-jD-0M9" secondAttribute="bottom" constant="4" id="4ha-EW-JhP"/>
+                            <constraint firstItem="J65-EG-nSC" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="5xn-Tu-eh2"/>
+                            <constraint firstItem="7Wt-yO-Xci" firstAttribute="top" secondItem="U2e-6s-XLg" secondAttribute="bottom" constant="20" id="AMW-GH-gsq"/>
+                            <constraint firstItem="7Ck-lw-WcU" firstAttribute="top" secondItem="LMH-Vp-xG8" secondAttribute="top" constant="20" id="FEE-c6-bQi"/>
+                            <constraint firstItem="U2e-6s-XLg" firstAttribute="top" secondItem="J65-EG-nSC" secondAttribute="bottom" constant="4" id="GEo-cf-1aY"/>
+                            <constraint firstItem="LMH-Vp-xG8" firstAttribute="trailing" secondItem="o4d-zN-wKK" secondAttribute="trailing" constant="20" id="Kqm-g2-hWl"/>
+                            <constraint firstItem="7Wt-yO-Xci" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="M3k-gl-Pgo"/>
+                            <constraint firstItem="zpS-jD-0M9" firstAttribute="top" secondItem="o4d-zN-wKK" secondAttribute="bottom" constant="20" id="Y0t-3O-bKa"/>
+                            <constraint firstItem="zpS-jD-0M9" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="YS0-fV-4gN"/>
+                            <constraint firstItem="ixq-ic-1ug" firstAttribute="top" secondItem="7Wt-yO-Xci" secondAttribute="bottom" constant="4" id="diB-Rr-9UU"/>
+                            <constraint firstItem="ixq-ic-1ug" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="hxg-3f-IUx"/>
+                            <constraint firstItem="o4d-zN-wKK" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="jzb-lN-Qw1"/>
+                            <constraint firstItem="7Ck-lw-WcU" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="kWE-PV-FPb"/>
+                            <constraint firstItem="o4d-zN-wKK" firstAttribute="top" secondItem="7Ck-lw-WcU" secondAttribute="bottom" constant="4" id="nf6-wG-MUZ"/>
+                            <constraint firstItem="0ZQ-lc-jxN" firstAttribute="leading" secondItem="LMH-Vp-xG8" secondAttribute="leading" constant="20" id="tXj-ko-2PE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Transaction" id="kpi-Wq-685"/>
+                    <connections>
+                        <outlet property="creditLabel" destination="U2e-6s-XLg" id="UoD-oe-pGM"/>
+                        <outlet property="debitLabel" destination="ixq-ic-1ug" id="jIR-GV-tKK"/>
+                        <outlet property="summaryLabel" destination="o4d-zN-wKK" id="wZs-R3-MDb"/>
+                        <outlet property="transactionDateLabel" destination="0ZQ-lc-jxN" id="0wE-N1-oiT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DpR-5z-zBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4s4-G9-aZR">
@@ -47,6 +206,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

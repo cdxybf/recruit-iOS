@@ -76,7 +76,10 @@ class RestClient: RestClientable {
                                                   data: Data) -> Result<T, Error> {
         do {
             let jsonDecoder = JSONDecoder()
-            jsonDecoder.dateDecodingStrategy = .iso8601
+            //jsonDecoder.dateDecodingStrategy = .iso8601
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+            jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             let decodedObject = try jsonDecoder.decode(T.self, from: data)
             
